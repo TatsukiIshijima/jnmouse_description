@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>jnmouse_description</name>
   <version>0.0.0</version>
   <description>The jnmouse_description package</description>
@@ -13,7 +13,8 @@
   <url type="repository">https://github.com/rt-net/jnmouse_description</url>
   <url type="bugtracker">https://github.com/rt-net/jnmouse_description/issues</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>urdf_launch</exec_depend>
 
   <depend>joint_state_publisher_gui</depend>
   <depend>joint_state_publisher</depend>
@@ -21,5 +22,9 @@
   <depend>rviz</depend>
   <depend>urdf</depend>
   <depend>xacro</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 
 </package>
