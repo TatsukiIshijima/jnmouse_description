@@ -9,20 +9,20 @@ ROS package with URDF description macro for [Jetson Nano Mouse](https://rt-net.j
 ## Requirements
 
 - ROS
-  - [Melodic Morenia](http://wiki.ros.org/melodic/Installation/Ubuntu)
+  - [Humble Hawksbill](https://docs.ros.org/en/foxy/Releases/Release-Humble-Hawksbill.html)
 
 ## Installation
 
 ```sh
-# Clone jnmouse_description and install dependencies
-cd ~/catkin_ws/src
+# jnmouse_descriptionをダウンロードして依存パッケージをインストールします
+cd ~/colcon_ws/src
 git clone https://github.com/rt-net/jnmouse_description
 rosdep install -r -y -i --from-paths .
 
-# Build the package
-cd ~/catkin_ws
-catkin build
-source devel/setup.bash
+# パッケージをビルドします
+cd ~/colcon_ws
+colcon build
+source install/setup.bash
 ```
 
 ## How to Use
@@ -30,7 +30,7 @@ source devel/setup.bash
 Display the robot model of Jetson Nano Mouse on RViz with the following comand.
 
 ```sh
-roslaunch jnmouse_description display_xacro.launch 
+ros2 launch jnmouse_description display.launch.py
 ```
 
 ## LICENSE

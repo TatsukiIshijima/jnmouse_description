@@ -9,20 +9,20 @@
 ## 動作環境
 
 - ROS
-  - [Melodic Morenia](http://wiki.ros.org/melodic/Installation/Ubuntu)
+  - [Humble Hawksbill](https://docs.ros.org/en/foxy/Releases/Release-Humble-Hawksbill.html)
 
 ## インストール
 
 ```sh
 # jnmouse_descriptionをダウンロードして依存パッケージをインストールします
-cd ~/catkin_ws/src
+cd ~/colcon_ws/src
 git clone https://github.com/rt-net/jnmouse_description
 rosdep install -r -y -i --from-paths .
 
 # パッケージをビルドします
-cd ~/catkin_ws
-catkin build
-source devel/setup.bash
+cd ~/colcon_ws
+colcon build
+source install/setup.bash
 ```
 
 ## 使い方
@@ -30,7 +30,7 @@ source devel/setup.bash
 Jetson Nano Mouseの[RobotModel](http://wiki.ros.org/rviz/DisplayTypes/RobotModel)をRViz上に表示するには以下のコマンドを実行します。
 
 ```sh
-roslaunch jnmouse_description display_xacro.launch 
+ros2 launch jnmouse_description display.launch.py
 ```
 
 ## ライセンス
